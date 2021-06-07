@@ -3,7 +3,14 @@ import trafficlight.ctrl.TrafficLightCtrl;
 
 public class MCP {
     public static void main(String[] args) {
-        TrafficLightCtrl ctrl = new TrafficLightCtrl();
-        ctrl.run();
+       TrafficLightCtrl ctrl=TrafficLightCtrl.getInstance() ;
+       ctrl.run();
     }
+
+
+
+
+
 }
+
+//Zusammenarbeit mit Merve und Lili

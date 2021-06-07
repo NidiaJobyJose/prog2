@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 public class TrafficLightGui extends JFrame implements ActionListener {
 
+
     public static final String ACTION_COMMAND_STOP = "stop";
 
     public static final String NAME_OF_THE_GAME = "Traffic Light";
@@ -33,6 +34,13 @@ public class TrafficLightGui extends JFrame implements ActionListener {
         //TODO implement a part of the pattern here
         //create the TrafficLight
         //connect subject and observer
+        green = new TrafficLight(Color.green);
+        yellow = new TrafficLight(Color.yellow);
+        red = new TrafficLight(Color.red);
+
+        ctrl.getRedState().addObserver(red);
+        ctrl.getYellowState().addObserver(yellow);
+        ctrl.getGreenState().addObserver(green);
     }
 
     private void init() {
